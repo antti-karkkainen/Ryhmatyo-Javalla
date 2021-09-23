@@ -18,7 +18,7 @@ public class Kayttoliittyma {
     } 
 
     public void lueTiedosto() {
-        try (Scanner lukija = new Scanner(Paths.get("tiedot.txt"))) {
+        try (Scanner lukija = new Scanner(Paths.get("words.txt"))) {
 
             while (lukija.hasNextLine()) {
                 String rivi = lukija.nextLine();
