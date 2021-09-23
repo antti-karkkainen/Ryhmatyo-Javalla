@@ -4,7 +4,8 @@ import java.util.ArrayList;
 public class Kayttoliittyma {
 
     private ArrayList<String> sanat;
-    private String sana;   
+    private String sana;
+    private Scanner lukija;
 
     public Kayttoliittyma() {
         this.sanat = new ArrayList<>();
@@ -12,8 +13,11 @@ public class Kayttoliittyma {
 
     public void kaynnista() {
         System.out.println("-1 lopettaa");
+        String syote = lukija.nextLine();
         while (true) {
-            
+            if (Integer.valueOf(syote) == -1) {
+                break;
+            }
         }
     } 
 
