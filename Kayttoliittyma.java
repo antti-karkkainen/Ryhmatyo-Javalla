@@ -1,7 +1,3 @@
-import java.util.Scanner;
-
-import jdk.javadoc.internal.doclets.formats.html.SourceToHTMLConverter;
-
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -27,7 +23,7 @@ public class Kayttoliittyma {
     } 
 
     public void lueTiedosto() {
-        try (Scanner lukija = new Scanner(Paths.get("tiedot.txt"))) {
+        try (Scanner lukija = new Scanner(Paths.get("words.txt"))) {
 
             while (lukija.hasNextLine()) {
                 String rivi = lukija.nextLine();
@@ -50,7 +46,5 @@ public class Kayttoliittyma {
     public boolean onkoVaarin() {        
         return false;
     }
-
-
 
 }
