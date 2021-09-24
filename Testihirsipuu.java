@@ -2,6 +2,16 @@ public class Testihirsipuu {
     
     public int vaarin = 0; 
 
+    out.append("The word: ");
+                for (int i = 0; i < word.length(); ++i) {
+                    if (visible[i]) {
+                        out.print(word.charAt(i));
+                    } else {
+                        out.print("?");
+                    }
+                }
+                out.append("\n\n");
+
     public static void alaviiva(String arvaus) {
 		String alaviiva = "";
 		for (int i = 0; i < sana.length(); i++) {
