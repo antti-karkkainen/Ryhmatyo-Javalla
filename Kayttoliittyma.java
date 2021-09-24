@@ -7,9 +7,12 @@ public class Kayttoliittyma {
     private ArrayList<String> sanat;
     private String sana;
     private Scanner lukija;
+    private int vaarin;
 
     public Kayttoliittyma() {
         this.sanat = new ArrayList<>();
+        this.sana = randomSana();
+        this.vaarin = 0;
     }
 
     public void kaynnista() {
@@ -31,20 +34,34 @@ public class Kayttoliittyma {
             }
 
         }  catch (Exception e) {
-            System.out.println("Virhe: tiedostoa ei löydy!" + e.getMessage());
-        }              
+            System.out.println("Virhe: tiedostoa ei löydy!" + e.getMessage()); 
     }
 
     public String randomSana() {
         return this.sanat.get((int) Math.random() * this.sanat.size());
     }
 
-    public void arvaaKirjain() {
-        
+    public char arvaaKirjain() {
+        System.out.print("Arvaa kirjain: ");
+        String arvaus = lukija.nextLine();
+        char arvausKirjaimena = arvaus.charAt(0);
+
+        return arvausKirjaimena;
     }
 
-    public boolean onkoVaarin() {        
+    public boolean onkoOikein() {    
+        int i = 0;
+        while (i < this.sana.length()) {
+            if (this.sana.charAt(i) == (arvaaKirjain())) {
+                return true;
+            }
+            i++;
+        }          
+        this.vaarin++;
         return false;
     }
 
+    public void josVaarin() {
+     
+    }
 }
