@@ -2,15 +2,15 @@ public class Testihirsipuu {
     
     public int vaarin = 0; 
 
-    public static void hang(String guess) {
-		String newasterisk = "";
-		for (int i = 0; i < word.length(); i++) {
-			if (word.charAt(i) == guess.charAt(0)) {
-				newasterisk += guess.charAt(0);
-			} else if (asterisk.charAt(i) != '_') {
-				newasterisk += word.charAt(i);
+    public static void alaviiva(String arvaus) {
+		String alaviiva = "";
+		for (int i = 0; i < sana.length(); i++) {
+			if (sana.charAt(i) == arvaus.charAt(0)) {
+				alaviiva += arvaus.charAt(0);
+			} else if (alaviiva.charAt(i) != '_') {
+				uusiAlaviiva += sana.charAt(i);
 			} else {
-				newasterisk += "_";
+				uusiAlaviiva += "_";
 			}
 		}
 
