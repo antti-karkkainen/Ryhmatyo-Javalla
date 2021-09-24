@@ -2,6 +2,18 @@ public class Testihirsipuu {
     
     public int vaarin = 0; 
 
+    public static void hang(String guess) {
+		String newasterisk = "";
+		for (int i = 0; i < word.length(); i++) {
+			if (word.charAt(i) == guess.charAt(0)) {
+				newasterisk += guess.charAt(0);
+			} else if (asterisk.charAt(i) != '_') {
+				newasterisk += word.charAt(i);
+			} else {
+				newasterisk += "_";
+			}
+		}
+
     public void vaaraSana() {
         if ( vaarin == 1) {
             System.out.println("Väärä kirjain, sinulla on 6 yritystä jäljellä.");
