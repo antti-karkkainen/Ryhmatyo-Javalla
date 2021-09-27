@@ -34,7 +34,8 @@ public class Kayttoliittyma {
             }
 
         }  catch (Exception e) {
-            System.out.println("Virhe: tiedostoa ei löydy!" + e.getMessage())}; 
+            System.out.println("Virhe: tiedostoa ei löydy!" + e.getMessage());
+        } 
     }
 
     public String randomSana() {
