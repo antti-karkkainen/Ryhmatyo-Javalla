@@ -57,10 +57,13 @@ public class Kayttoliittyma {
         return this.sanat.get(arpa.nextInt(sanat.size()));
     }
 
+
+
     public char arvaaKirjain() {
         System.out.print("Arvaa kirjain: ");
         String arvaus = lukija.nextLine();
         char arvausKirjaimena = arvaus.charAt(0);
+        arvaus = arvaus.toLowerCase(); 
 
         return arvausKirjaimena;
     }
