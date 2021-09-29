@@ -12,17 +12,25 @@ public class Kayttoliittyma {
 
     public Kayttoliittyma() {
         this.sanat = new ArrayList<>();
-        this.sana = randomSana();
+        this.sana = "";
         this.vaarin = 0;
+        this.lukija = new Scanner(System.in);
     }
 
     public void kaynnista() {
+        System.out.println("H.I.R.S.I.P.U.U");
         System.out.println("-1 lopettaa");
         String syote = lukija.nextLine();
+        lueTiedosto();
+        this.sana = randomSana();
+
         while (true) {
             if (Integer.valueOf(syote) == -1) {
                 break;
             }
+
+            System.out.print("Arvaa kirjain: ");
+
         }
     } 
 
@@ -42,7 +50,7 @@ public class Kayttoliittyma {
     //mooc vitsipankkista otettu mallia
     public String randomSana() {
         if (this.sanat.isEmpty()) {
-            return "Vitsit vähissä.";
+            return "Tiedostosta ei löydy sanoja!";
         }
  
         Random arpa = new Random();
@@ -126,7 +134,7 @@ public class Kayttoliittyma {
             System.out.println("  -------");
             System.out.println("  |     |");
             System.out.println("  O     |");
-            System.out.println(" \|/    |");
+            System.out.println("\\|/    |");
             System.out.println("  |     |");
             System.out.println("  |     |");
             System.out.println("        |");
@@ -141,7 +149,7 @@ public class Kayttoliittyma {
             System.out.println("  -------");
             System.out.println("  |     |");
             System.out.println("  O     |");
-            System.out.println(" \|/    |");
+            System.out.println("\\|/    |");
             System.out.println("  |     |");
             System.out.println(" /      |");
             System.out.println("        |");
@@ -155,9 +163,9 @@ public class Kayttoliittyma {
             System.out.println("  -------");
             System.out.println("  |     |");
             System.out.println("  O     |");
-            System.out.println(" \|/    |");
+            System.out.println("\\|/    |");
             System.out.println("  |     |");
-            System.out.println(" / \    |");
+            System.out.println(" / \\    |");
             System.out.println("        |");
             System.out.println("        |");
             System.out.println("        |");
