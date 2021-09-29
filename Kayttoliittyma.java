@@ -1,6 +1,7 @@
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Random;
 
 public class Kayttoliittyma {
 
@@ -37,8 +38,14 @@ public class Kayttoliittyma {
             System.out.println("Virhe: tiedostoa ei löydy!" + e.getMessage())}; 
     }
 
+    //mooc vitsipankkista otettu mallia
     public String randomSana() {
-        return this.sanat.get((int) Math.random() * this.sanat.size());
+        if (this.sanat.isEmpty()) {
+            return "Vitsit vähissä.";
+        }
+ 
+        Random arpa = new Random();
+        return this.sanat.get(arpa.nextInt(sanat.size()));
     }
 
     public char arvaaKirjain() {
