@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 public class Piirtaja {
     
 }
@@ -96,3 +97,6 @@ public void josVaarin() {
         System.out.println(" ----------");
     }
 }
+=======
+
+>>>>>>> 5a433889ae18bb08f7b3e50aa5a305d4834742a0
