@@ -61,7 +61,8 @@ public class Kayttoliittyma {
         System.out.print("Arvaa kirjain: ");
         String arvaus = lukija.nextLine();
         char arvausKirjaimena = arvaus.charAt(0);
-        arvaus = arvaus.toLowerCase(); 
+        arvaus = arvaus.toUpperCase(); 
+        String arvaus1 = arvaus.replaceAll("[A-Z]", "_ ");
 
         return arvausKirjaimena;
     }
