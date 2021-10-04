@@ -29,8 +29,6 @@ public class Kayttoliittyma {
                 break;
             }
 
-            System.out.print("Arvaa kirjain: ");
-
         }
     } 
 
@@ -54,7 +52,7 @@ public class Kayttoliittyma {
         }
  
         Random arpa = new Random();
-        return this.sanat.get(arpa.nextInt(sanat.size()));
+        return this.sanat.get(arpa.nextInt(sanat.size()));      
     }
 
 
@@ -73,7 +71,7 @@ public class Kayttoliittyma {
         int i = 0;
         while (i < this.sana.length()) {
             if (this.sana.charAt(i) == (arvaaKirjain())) {
-                return true;
+                return true;                               
             }
             i++;
         }          
