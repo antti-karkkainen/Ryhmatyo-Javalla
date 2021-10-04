@@ -29,11 +29,6 @@ public class Kayttoliittyma {
                 break;
             }
 
-            // Pitäisiköhän ottaa arvaus täällä kaynnista() metodissa jo talteen ja syöttää sitten parametrina arvaaKirjain() metodille:
-            //System.out.print("Arvaa kirjain: ");
-            //String arvaus = lukija.nextLine();
-            //arvaaKirjain(arvaus);
-
         }
     } 
 
@@ -60,12 +55,13 @@ public class Kayttoliittyma {
         return this.sanat.get(arpa.nextInt(sanat.size()));      
     }
 
-    // Tähän  pitää ehkä lisätä parametrina String arvaus, joka otetaankin tuolla kaynnistä() metodissa.
-    // Mutta sit pitää mahdollisesti muuttaa kans tuota onkoOikein() metodia jotenkin, en oo varma?
-    public char arvaaKirjain() {    // -> public char arvaaKirjain(String arvaus)
+
+
+    public char arvaaKirjain() {
         System.out.print("Arvaa kirjain: ");
         String arvaus = lukija.nextLine();
         char arvausKirjaimena = arvaus.charAt(0);
+        arvaus = arvaus.toLowerCase(); 
 
         return arvausKirjaimena;
     }
@@ -73,7 +69,7 @@ public class Kayttoliittyma {
     public boolean onkoOikein() {    
         int i = 0;
         while (i < this.sana.length()) {
-            if (this.sana.charAt(i) == (arvaaKirjain())) { // Jos muuttaa arvaaKirjain metodia, niin että siinä on parametrina String arvaus, miten tätä pitäisi muuttaa, luulen että se arvaus pitäisi luoda jo tuolla alussa, että sitä voisi käyttää näissä metodeissa?
+            if (this.sana.charAt(i) == (arvaaKirjain())) {
                 return true;                               
             }
             i++;
