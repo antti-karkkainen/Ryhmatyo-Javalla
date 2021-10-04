@@ -1,4 +1,13 @@
+public class Piirtaja {
 
+    public int vaarin;
+
+    public Piirtaja(int vaarin) {
+        this.vaarin = vaarin;
+    }
+
+
+}
 
 public void josVaarin() {
     if ( vaarin == 1) {
@@ -95,3 +104,4 @@ public void josVaarin() {
         System.out.println(" ----------");
     }
 }
+
