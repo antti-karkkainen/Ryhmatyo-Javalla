@@ -7,7 +7,7 @@ public class Piirtaja {
     }
 
 
-}
+
 
 public void josVaarin() {
     if ( vaarin == 1) {
@@ -104,4 +104,4 @@ public void josVaarin() {
         System.out.println(" ----------");
     }
 }
-
+}
