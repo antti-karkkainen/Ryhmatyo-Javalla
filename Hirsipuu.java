@@ -9,7 +9,8 @@ public class Hirsipuu {
     private String sana;
     
     public Hirsipuu() {
-        this.sana = kayttoliittyma.randomSana();
+        this.sana = kayttoliittyma.randomSana().toUpperCase();
+        this.vaarin = 0;
     }
 
     public void arvaaKirjain(String arvaus) {
@@ -18,6 +19,10 @@ public class Hirsipuu {
         String alaviivat = this.sana.replaceAll("[A-Z]", "_ ");
                                                                 
         //System.out.println(alaviivat);
+
+        if (arvaus.equals(this.sana)) {
+            System.out.println("Arvasit sanan oikein!");
+        }
 
         int i = 0;
         while (i < this.sana.length()) {
