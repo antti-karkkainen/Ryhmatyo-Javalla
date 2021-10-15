@@ -7,3 +7,4 @@ Hirsipuu -peli
 
 Antti K.
 Mikko R.
+Kim T.
