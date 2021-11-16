@@ -12,6 +12,7 @@ public class Käyttöliittymäv2 {
         Scanner nappaimisto = new Scanner(System.in);
         Piirtaja piirtaja = new Piirtaja();
         List<String> sanat = new ArrayList<>();
+        List<Character> arvaukset = new ArrayList<>();
 
         while (scanner.hasNext()) {
             sanat.add(scanner.nextLine());
@@ -19,22 +20,17 @@ public class Käyttöliittymäv2 {
 
         Random arpa = new Random();
         String sana = sanat.get(arpa.nextInt(sanat.size()));
-
         System.out.println(sana);
-
-        List<Character> arvaukset = new ArrayList<>();
 
         printtaaja(sana, arvaukset);
     
         while(true) {
             pelaajasyote(nappaimisto, sana, arvaukset);
-
             if (printtaaja(sana, arvaukset)) {
                 break;
             }
 
             System.out.println("arvaa kirjain:");
-
             if(nappaimisto.nextLine().equals(sana)) {
                 System.out.println("Voitit pelin");
                 break;
