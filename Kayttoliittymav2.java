@@ -10,7 +10,7 @@ import java.util.Random;
 
 
 
-public class Käyttöliittymäv2 {
+public class Kayttoliittymav2 {
     public static void main(String [] args) throws FileNotFoundException {
     Scanner scanner = new Scanner(new File("words.txt"));
     Scanner nappaimisto = new Scanner(System.in);

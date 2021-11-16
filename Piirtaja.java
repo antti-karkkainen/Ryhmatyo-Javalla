@@ -89,7 +89,6 @@ public class Piirtaja {
         }
 
         if (vaarin == 7) {
-            System.out.println("Väärä kirjain, hävisit pelin!");
             System.out.println("  -------");
             System.out.println("  |     |");
             System.out.println("  O     |");
@@ -100,6 +99,7 @@ public class Piirtaja {
             System.out.println("        |");
             System.out.println("        |");
             System.out.println(" ----------");
+            System.out.println("Väärä kirjain, hävisit pelin!");
         }
     }
 }
