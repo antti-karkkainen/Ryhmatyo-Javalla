@@ -3,12 +3,8 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
 import javax.xml.stream.events.Characters;
-
 import java.util.Random;
-
-
 
 public class Käyttöliittymäv2 {
     public static void main(String [] args) throws FileNotFoundException {
