@@ -15,11 +15,12 @@ public class Käyttöliittymäv2 {
     Scanner scanner = new Scanner(new File("words.txt"));
     Scanner nappaimisto = new Scanner(System.in);
     Piirtaja piirtaja = new Piirtaja();
-
     List<String> sanat = new ArrayList<>();
+
     while (scanner.hasNext()) {
-    sanat.add(scanner.nextLine());
+        sanat.add(scanner.nextLine());
     }
+    
     Random arpa = new Random();
     String sana = sanat.get(arpa.nextInt(sanat.size()));
 
@@ -37,6 +38,7 @@ public class Käyttöliittymäv2 {
         }
 
         System.out.println("arvaa kirjain:");
+
         if(nappaimisto.nextLine().equals(sana)) {
             System.out.println("Voitit pelin");
             break;
@@ -45,18 +47,15 @@ public class Käyttöliittymäv2 {
             System.out.println("väärin");
             piirtaja.setVaarin();            
         }
-
     }
     System.out.println("Voitit pelin");
+
 }
-
     private static void pelaajasyote(Scanner nappaimisto, String sana,List<Character> arvaukset) {
-    System.out.println("Arvaa kirjain");
-    String arvattu = nappaimisto.nextLine();
+        System.out.println("Arvaa kirjain");
 
-    arvaukset.add(arvattu.charAt(0));
-
-
+        String arvattu = nappaimisto.nextLine();
+        arvaukset.add(arvattu.charAt(0));
     }
 
     private static boolean printtaaja(String sana, List<Character> arvaukset) {  
@@ -74,5 +73,4 @@ public class Käyttöliittymäv2 {
 
         return (sana.length() == montaoikein);
     }
-   
 }
