@@ -32,24 +32,24 @@ public class Kayttoliittymav2 {
         pelaajasyote(nappaimisto, sana, arvaukset);
 
         if (printtaaja(sana, arvaukset)) {
+            System.out.println("Voitit pelin");
             break;
         }
+
+        System.out.println("arvaa kirjain:");
+        if(nappaimisto.nextLine().equals(sana)) {
+            System.out.println("Voitit pelin");
+            break;
+        }
+        else{
+            System.out.println("väärin");
+            
+        }
     }
-    System.out.println("Voitit pelin");
 }
 
 
-
-
-
-
-
-
-
-
-
-
-    private static void pelaajasyote(Scanner nappaimisto, String sana,List<Character> arvaukset) {
+private static void pelaajasyote(Scanner nappaimisto, String sana,List<Character> arvaukset) {
     System.out.println("Arvaa kirjain");
     String arvattu = nappaimisto.nextLine();
     arvaukset.add(arvattu.charAt(0));
@@ -72,3 +72,4 @@ public class Kayttoliittymav2 {
     }
    
 }
+
