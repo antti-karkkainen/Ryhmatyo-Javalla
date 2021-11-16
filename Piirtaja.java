@@ -1,11 +1,14 @@
 public class Piirtaja {
 
-    public int vaarin;
+    private int vaarin;
 
-    public Piirtaja(int vaarin) {
-        this.vaarin = vaarin;
+    public Piirtaja() {
+        this.vaarin = 0;
     }
 
+    public void setVaarin() {
+        this.vaarin++;
+    }
 
     public void josVaarin() {
         if ( vaarin == 1) {
