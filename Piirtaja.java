@@ -3,7 +3,7 @@ public class Piirtaja {
     public int vaarin;
 
     public Piirtaja(int vaarin) {
-        this.vaarin = vaarin;
+        this.vaarin = 0;
     }
 
 
