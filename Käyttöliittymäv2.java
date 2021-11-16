@@ -12,54 +12,53 @@ import java.util.Random;
 
 public class Käyttöliittymäv2 {
     public static void main(String [] args) throws FileNotFoundException {
-    Scanner scanner = new Scanner(new File("words.txt"));
-    Scanner nappaimisto = new Scanner(System.in);
-    Piirtaja piirtaja = new Piirtaja();
-    List<String> sanat = new ArrayList<>();
+        Scanner scanner = new Scanner(new File("words.txt"));
+        Scanner nappaimisto = new Scanner(System.in);
+        Piirtaja piirtaja = new Piirtaja();
+        List<String> sanat = new ArrayList<>();
 
-    while (scanner.hasNext()) {
-        sanat.add(scanner.nextLine());
-    }
+        while (scanner.hasNext()) {
+            sanat.add(scanner.nextLine());
+        }
+
+        Random arpa = new Random();
+        String sana = sanat.get(arpa.nextInt(sanat.size()));
+
+        System.out.println(sana);
+
+        List<Character> arvaukset = new ArrayList<>();
+
+        printtaaja(sana, arvaukset);
     
-    Random arpa = new Random();
-    String sana = sanat.get(arpa.nextInt(sanat.size()));
+        while(true) {
+            pelaajasyote(nappaimisto, sana, arvaukset);
 
-    System.out.println(sana);
+            if (printtaaja(sana, arvaukset)) {
+                break;
+            }
 
-    List<Character> arvaukset = new ArrayList<>();
+            System.out.println("arvaa kirjain:");
 
-    printtaaja(sana, arvaukset);
-    
-    while(true) {
-        pelaajasyote(nappaimisto, sana, arvaukset);
-
-        if (printtaaja(sana, arvaukset)) {
-            break;
+            if(nappaimisto.nextLine().equals(sana)) {
+                System.out.println("Voitit pelin");
+                break;
+            }
+            else {
+                System.out.println("väärin");
+                piirtaja.setVaarin();            
+            }
         }
-
-        System.out.println("arvaa kirjain:");
-
-        if(nappaimisto.nextLine().equals(sana)) {
-            System.out.println("Voitit pelin");
-            break;
-        }
-        else{
-            System.out.println("väärin");
-            piirtaja.setVaarin();            
-        }
+        System.out.println("Voitit pelin");
     }
-    System.out.println("Voitit pelin");
 
-}
     private static void pelaajasyote(Scanner nappaimisto, String sana,List<Character> arvaukset) {
         System.out.println("Arvaa kirjain");
-
         String arvattu = nappaimisto.nextLine();
         arvaukset.add(arvattu.charAt(0));
     }
 
     private static boolean printtaaja(String sana, List<Character> arvaukset) {  
-       int montaoikein = 0;
+        int montaoikein = 0;
         for (int i = 0; i < sana.length(); i++) {
             if (arvaukset.contains(sana.charAt(i))) {
                 System.out.print(sana.charAt(i));
@@ -70,7 +69,6 @@ public class Käyttöliittymäv2 {
             }
         }
         System.out.println();
-
         return (sana.length() == montaoikein);
     }
 }
