@@ -41,10 +41,10 @@ public class Piirtaja {
             System.out.println("  O     |");
             System.out.println("  |     |");
             System.out.println("  |     |");
-            System.out.println("       |");
-            System.out.println("       |");
-            System.out.println("       |");
-            System.out.println("       |");
+            System.out.println("        |");
+            System.out.println("        |");
+            System.out.println("        |");
+            System.out.println("        |");
             System.out.println("----------");
         }
 
@@ -55,10 +55,10 @@ public class Piirtaja {
             System.out.println("   O     |");
             System.out.println("\"+|     |");
             System.out.println("   |     |");
-            System.out.println("        |");
-            System.out.println("        |");
-            System.out.println("        |");
-            System.out.println("        |");
+            System.out.println("         |");
+            System.out.println("         |");
+            System.out.println("         |");
+            System.out.println("         |");
             System.out.println(" ----------");
         }
 
@@ -70,10 +70,10 @@ public class Piirtaja {
             System.out.println(" \\|/    |");
             System.out.println("   |     |");
             System.out.println("   |     |");
-            System.out.println("        |");
-            System.out.println("        |");
-            System.out.println("        |");
-            System.out.println("        |");
+            System.out.println("         |");
+            System.out.println("         |");
+            System.out.println("         |");
+            System.out.println("         |");
             System.out.println(" ----------");
         }
 
@@ -85,9 +85,9 @@ public class Piirtaja {
             System.out.println(" \\|/    |");
             System.out.println("   |     |");
             System.out.println("  /      |");
-            System.out.println("        |");
-            System.out.println("        |");
-            System.out.println("        |");
+            System.out.println("         |");
+            System.out.println("         |");
+            System.out.println("         |");
             System.out.println(" ----------");
         }
 
@@ -97,10 +97,10 @@ public class Piirtaja {
             System.out.println("   O     |");
             System.out.println(" \\|/    |");
             System.out.println("   |     |");
-            System.out.println("  / \\    |");
-            System.out.println("        |");
-            System.out.println("        |");
-            System.out.println("        |");
+            System.out.println("  / \\   |");
+            System.out.println("         |");
+            System.out.println("         |");
+            System.out.println("         |");
             System.out.println(" ----------");
             System.out.println("Väärä kirjain, hävisit pelin!");
         }
