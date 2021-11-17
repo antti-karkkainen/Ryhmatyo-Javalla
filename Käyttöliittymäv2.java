@@ -18,9 +18,9 @@ public class Käyttöliittymäv2 {
             sanat.add(scanner.nextLine());
         }
 
-        Random arpa = new Random();
-        String sana = sanat.get(arpa.nextInt(sanat.size()));
-        System.out.println(sana);
+        Random arpa = new Random(); // Luodaan random muuttuja
+        String sana = sanat.get(arpa.nextInt(sanat.size())); // Luodaan String-muuttuja, jolle annetaan satunnainen arvo sanoista koostuvasta listasta.
+        System.out.println(sana); // Printtaa sanan testailua varten.
 
         //printtaaja(sana, arvaukset);
     
@@ -31,25 +31,24 @@ public class Käyttöliittymäv2 {
                 break;
             }
             
-            if (!loytyykoSanasta(sana, arvaus)) {
+            if (!loytyykoSanasta(sana, arvaus)) {   // Jos arvattua kirjainta ei löydy sanasta -> printtaa -> lisää piirtaja luokan vaarin-muuttujan arvoa yhdellä.-> tsekkaa mitä pitää piirtää suhteessa väärin-muuttujan arvoon.
                 System.out.println("Arvaus väärin!");
                 piirtaja.setVaarin();
                 piirtaja.josVaarin();
-            } else {
+            } else { // Jos arvattu kirjain on oikein, printtaa 
                 System.out.println("Oikein!");
             }
-        
-            //(!loytyykoSanasta(sana, arvaukset)
             
-            if (printtaaja(sana, arvaukset)) {
+            if (printtaaja(sana, arvaukset)) {  // Jos kaikki kirjaimet arvattu (Jos arvausten pituus = sanan pituus)
+                System.out.println("Arvasit kaikki kirjaimet, Voitit pelin!");
                 break;
             }
 
-            if (piirtaja.getVaarin() == 7) {
+            if (piirtaja.getVaarin() == 7) { // Jos 7 arvausta väärin, riko looppi,"Hävisit pelin" -viesti tulee Piirtaja-luokasta.
                 break;
             }
 
-            /*
+            /* Vanhaa koodia.
             if(nappaimisto.nextLine().equals(sana)) {
                 System.out.println("Voitit pelin");
                 break;
@@ -63,7 +62,7 @@ public class Käyttöliittymäv2 {
         //System.out.println("Voitit pelin");
     }
 
-    private static boolean loytyykoSanasta(String sana, String arvaus) {       // Jos arvauksen eka kirjain löytyy sanasta, palauta true.
+    private static boolean loytyykoSanasta(String sana, String arvaus) {  // Jos arvauksen eka kirjain löytyy sanasta, palauta true.
         for (int i = 0; i < sana.length(); i++) {      
             char a = sana.charAt(i);
             char b = arvaus.charAt(0);
@@ -75,7 +74,7 @@ public class Käyttöliittymäv2 {
         return false;
     }
 
-    private static String pelaajasyote(Scanner nappaimisto, String sana,List<Character> arvaukset) {
+    private static String pelaajasyote(Scanner nappaimisto, String sana,List<Character> arvaukset) { // Lisää arvattu kirjain listaan ja palauta arvaus merkkijonona.
         System.out.println("Arvaa kirjain");
         String arvattu = nappaimisto.nextLine();
         arvaukset.add(arvattu.charAt(0));
