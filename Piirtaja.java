@@ -2,11 +2,7 @@ public class Piirtaja {
 
     private int vaarin;
 
-<<<<<<< HEAD
-    public Piirtaja(int vaarin) {
-=======
     public Piirtaja() {
->>>>>>> ffeda456304733106597bd9c7fb9b804c34f5434
         this.vaarin = 0;
     }
 
