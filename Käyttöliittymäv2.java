@@ -25,6 +25,7 @@ public class Käyttöliittymäv2 {
         printtaaja(sana, arvaukset);
     
         while(true) {
+            piirtaja.josVaarin();
             pelaajasyote(nappaimisto, sana, arvaukset);
             if (printtaaja(sana, arvaukset)) {
                 break;
