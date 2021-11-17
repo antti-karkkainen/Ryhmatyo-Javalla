@@ -22,11 +22,24 @@ public class Käyttöliittymäv2 {
         String sana = sanat.get(arpa.nextInt(sanat.size()));
         System.out.println(sana);
 
-        printtaaja(sana, arvaukset);
+        //printtaaja(sana, arvaukset);
     
         while(true) {
-            piirtaja.josVaarin();
-            pelaajasyote(nappaimisto, sana, arvaukset);
+            //piirtaja.josVaarin();
+
+            String arvaus = pelaajasyote(nappaimisto, sana, arvaukset);
+
+            if (arvaus.equals(sana)) { // Jos koko sana arvattu suoraan oikein
+                System.out.println("Voitit pelin");
+                break;
+            } else if (loytyykoSanasta(sana, arvaukset)) {  // Jos arvattu KIRJAIN löytyy sanasta -> printtaa Oikein!
+                System.out.println("Oikein!");
+            } else if (!loytyykoSanasta(sana, arvaukset)) { // Jos ei löydy -> lisää piirtäjän väärin muuttujan arvoa yhdellä, tulosta Väärin!
+                piirtaja.setVaarin();
+                System.out.println("Väärin!");
+            }
+        
+
             if (printtaaja(sana, arvaukset)) {
                 break;
             }
@@ -45,13 +58,24 @@ public class Käyttöliittymäv2 {
                 piirtaja.setVaarin();            
             }
         }
-        System.out.println("Voitit pelin");
+        //System.out.println("Voitit pelin");
     }
 
-    private static void pelaajasyote(Scanner nappaimisto, String sana,List<Character> arvaukset) {
+    private static boolean loytyykoSanasta(String sana, List<Character> arvaukset) {       
+        for (int i = 0; i < sana.length(); i++) {
+            if (arvaukset.contains(sana.charAt(i))) {
+                return true;
+            }
+        }        
+        return false;
+    }
+
+    private static String pelaajasyote(Scanner nappaimisto, String sana,List<Character> arvaukset) {
         System.out.println("Arvaa kirjain");
         String arvattu = nappaimisto.nextLine();
         arvaukset.add(arvattu.charAt(0));
+
+        return arvattu;
     }
 
     private static boolean printtaaja(String sana, List<Character> arvaukset) {  
