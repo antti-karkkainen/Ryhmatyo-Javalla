@@ -25,21 +25,22 @@ public class Käyttöliittymäv2 {
         //printtaaja(sana, arvaukset);
     
         while(true) {
-            //piirtaja.josVaarin();
-
             String arvaus = pelaajasyote(nappaimisto, sana, arvaukset);
-
             if (arvaus.equals(sana)) { // Jos koko SANA arvattu suoraan oikein -> Printtaa Voitit, sulkee loopin.
                 System.out.println("Voitit pelin");
                 break;
-            } else if (loytyykoSanasta(sana, arvaukset)) {  // Jos arvattu KIRJAIN löytyy sanasta -> printtaa Oikein!
-                System.out.println("Oikein!");
-            } else if (!loytyykoSanasta(sana, arvaukset)) { // Jos KIRJAINTA ei löydy -> lisää piirtäjän väärin muuttujan arvoa yhdellä, tulosta Väärin!
+            }
+            
+            if (!loytyykoSanasta(sana, arvaus)) {
+                System.out.println("Arvaus väärin!");
                 piirtaja.setVaarin();
-                System.out.println("Väärin!");
+                piirtaja.josVaarin();
+            } else {
+                System.out.println("Oikein!");
             }
         
-
+            //(!loytyykoSanasta(sana, arvaukset)
+            
             if (printtaaja(sana, arvaukset)) {
                 break;
             }
@@ -62,9 +63,12 @@ public class Käyttöliittymäv2 {
         //System.out.println("Voitit pelin");
     }
 
-    private static boolean loytyykoSanasta(String sana, List<Character> arvaukset) {       
-        for (int i = 0; i < sana.length(); i++) {
-            if (arvaukset.contains(sana.charAt(i))) {
+    private static boolean loytyykoSanasta(String sana, String arvaus) {       // Jos arvauksen eka kirjain löytyy sanasta, palauta true.
+        for (int i = 0; i < sana.length(); i++) {      
+            char a = sana.charAt(i);
+            char b = arvaus.charAt(0);
+
+            if (b == a) { 
                 return true;
             }
         }        
