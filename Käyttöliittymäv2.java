@@ -29,12 +29,12 @@ public class Käyttöliittymäv2 {
 
             String arvaus = pelaajasyote(nappaimisto, sana, arvaukset);
 
-            if (arvaus.equals(sana)) { // Jos koko sana arvattu suoraan oikein
+            if (arvaus.equals(sana)) { // Jos koko SANA arvattu suoraan oikein -> Printtaa Voitit, sulkee loopin.
                 System.out.println("Voitit pelin");
                 break;
             } else if (loytyykoSanasta(sana, arvaukset)) {  // Jos arvattu KIRJAIN löytyy sanasta -> printtaa Oikein!
                 System.out.println("Oikein!");
-            } else if (!loytyykoSanasta(sana, arvaukset)) { // Jos ei löydy -> lisää piirtäjän väärin muuttujan arvoa yhdellä, tulosta Väärin!
+            } else if (!loytyykoSanasta(sana, arvaukset)) { // Jos KIRJAINTA ei löydy -> lisää piirtäjän väärin muuttujan arvoa yhdellä, tulosta Väärin!
                 piirtaja.setVaarin();
                 System.out.println("Väärin!");
             }
@@ -48,7 +48,7 @@ public class Käyttöliittymäv2 {
                 break;
             }
 
-            //System.out.println("arvaa kirjain:");
+            /*
             if(nappaimisto.nextLine().equals(sana)) {
                 System.out.println("Voitit pelin");
                 break;
@@ -57,6 +57,7 @@ public class Käyttöliittymäv2 {
                 System.out.println("väärin");
                 piirtaja.setVaarin();            
             }
+            */
         }
         //System.out.println("Voitit pelin");
     }
