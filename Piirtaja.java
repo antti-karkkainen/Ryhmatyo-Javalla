@@ -2,16 +2,16 @@ public class Piirtaja {
 
     private int vaarin;
 
-<<<<<<< HEAD
-    public Piirtaja(int vaarin) {
-=======
     public Piirtaja() {
->>>>>>> ffeda456304733106597bd9c7fb9b804c34f5434
         this.vaarin = 0;
     }
 
     public void setVaarin() {
         this.vaarin++;
+    }
+
+    public int getVaarin() {
+        return this.vaarin;
     }
 
     public void josVaarin() {
@@ -98,8 +98,8 @@ public class Piirtaja {
         if (vaarin == 7) {
             System.out.println("  -------");
             System.out.println("   |     |");
-            System.out.println("   O     |");
-            System.out.println(" \\|/    |");
+            System.out.println("  ( )     |");
+            System.out.println(" " +"\" + |/    |");
             System.out.println("   |     |");
             System.out.println("  / \\    |");
             System.out.println("        |");

@@ -31,6 +31,10 @@ public class Käyttöliittymäv2 {
                 break;
             }
 
+            if (piirtaja.getVaarin() == 7) {
+                break;
+            }
+
             System.out.println("arvaa kirjain:");
             if(nappaimisto.nextLine().equals(sana)) {
                 System.out.println("Voitit pelin");
