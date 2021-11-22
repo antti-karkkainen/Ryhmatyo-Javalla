@@ -30,7 +30,7 @@ public class Piirtaja {
             System.out.println("Väärä kirjain, sinulla on 5 yritystä jäljellä.");
             System.out.println(" -------");
             System.out.println(" |     |");
-            System.out.println(" O     |");
+            System.out.println("( )    |");
             System.out.println("       |");
             System.out.println("       |");
             System.out.println("       |");
@@ -42,7 +42,7 @@ public class Piirtaja {
             System.out.println("Väärä kirjain, sinulla on 4 yritystä jäljellä.");
             System.out.println(" -------");
             System.out.println("  |     |");
-            System.out.println("  O     |");
+            System.out.println(" ( )    |");
             System.out.println("  |     |");
             System.out.println("  |     |");
             System.out.println("        |");
@@ -56,8 +56,8 @@ public class Piirtaja {
             System.out.println("Väärä kirjain, sinulla on 3 yritystä jäljellä.");
             System.out.println("  -------");
             System.out.println("   |     |");
-            System.out.println("   O     |");
-            System.out.println("\"+|     |");
+            System.out.println("  ( )    |");
+            System.out.println("  /|     |");
             System.out.println("   |     |");
             System.out.println("         |");
             System.out.println("         |");
@@ -70,8 +70,8 @@ public class Piirtaja {
             System.out.println("Väärä kirjain, sinulla on 2 yritystä jäljellä.");
             System.out.println("  -------");
             System.out.println("   |     |");
-            System.out.println("   O     |");
-            System.out.println(" \\|/    |");
+            System.out.println("  ( )    |");
+            System.out.println("  /|\\    |");
             System.out.println("   |     |");
             System.out.println("   |     |");
             System.out.println("         |");
@@ -85,8 +85,8 @@ public class Piirtaja {
             System.out.println("Väärä kirjain, sinulla on 1 yritys jäljellä.");
             System.out.println("  -------");
             System.out.println("   |     |");
-            System.out.println("   O     |");
-            System.out.println(" \\|/    |");
+            System.out.println("  ( )    |");
+            System.out.println("  /|\\    |");
             System.out.println("   |     |");
             System.out.println("  /      |");
             System.out.println("         |");
@@ -96,16 +96,16 @@ public class Piirtaja {
         }
 
         if (vaarin == 7) {
-            System.out.println("  -------");
-            System.out.println("   |     |");
+            System.out.println("  __________");
+            System.out.println("   |      |");
             System.out.println("  ( )     |");
-            System.out.println(" " +"\" + |/    |");
-            System.out.println("   |     |");
-            System.out.println("  / \\   |");
-            System.out.println("         |");
-            System.out.println("         |");
-            System.out.println("         |");
-            System.out.println(" ----------");
+            System.out.println("  /|\\     |");
+            System.out.println("   |      |");
+            System.out.println("  / \\     |");
+            System.out.println("          |");
+            System.out.println("          |");
+            System.out.println("          |");
+            System.out.println(" ------------");
             System.out.println("Väärä kirjain, hävisit pelin!");
         }
     }
