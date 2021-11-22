@@ -1,20 +1,20 @@
 public class Piirtaja {
 
-    private int vaarin;
+    private int vaarin; // Väärien arvausten lukumäärä
 
     public Piirtaja() {
         this.vaarin = 0;
     }
 
-    public void setVaarin() {
+    public void setVaarin() { // Lisää väärien arvausten lukumäärä yhdellä.
         this.vaarin++;
     }
 
-    public int getVaarin() {
+    public int getVaarin() { // Palauttaa väärien arvausten lukumäärän.
         return this.vaarin;
     }
 
-    public void josVaarin() {
+    public void josVaarin() { // Tulostaa osia hirsipuusta, kun käyttäjä arvaa väärin ja kertoo montako arvausta voi vielä vastata väärin ennen kuin häviää pelin.
         if ( vaarin == 1) {
             System.out.println("Väärä kirjain, sinulla on 6 yritystä jäljellä.");
             System.out.println(" -------");

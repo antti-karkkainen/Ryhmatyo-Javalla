@@ -6,7 +6,7 @@ import java.util.Scanner;
 import javax.xml.stream.events.Characters;
 import java.util.Random;
 
-public class Käyttöliittymäv2 {
+public class Paaohjelma {
     public static void main(String [] args) throws FileNotFoundException {
         Scanner scanner = new Scanner(new File("words.txt"));
         Scanner nappaimisto = new Scanner(System.in);
