@@ -21,8 +21,6 @@ public class Paaohjelma {
         Random arpa = new Random(); // Luodaan random muuttuja
         String sana = sanat.get(arpa.nextInt(sanat.size())); // Luodaan String-muuttuja, jolle annetaan satunnainen arvo sanoista koostuvasta listasta.
         System.out.println(sana); // Printtaa sanan testailua varten.
-
-        //printtaaja(sana, arvaukset);
     
         while(true) {
             String arvaus = pelaajasyote(nappaimisto, sana, arvaukset);
