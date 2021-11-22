@@ -47,19 +47,7 @@ public class Paaohjelma {
             if (piirtaja.getVaarin() == 7) { // Jos 7 arvausta väärin, riko looppi,"Hävisit pelin" -viesti tulee Piirtaja-luokasta.
                 break;
             }
-
-            /* Vanhaa koodia.
-            if(nappaimisto.nextLine().equals(sana)) {
-                System.out.println("Voitit pelin");
-                break;
-            }
-            else {
-                System.out.println("väärin");
-                piirtaja.setVaarin();            
-            }
-            */
         }
-        //System.out.println("Voitit pelin");
     }
 
     private static boolean loytyykoSanasta(String sana, String arvaus) {  // Jos arvauksen eka kirjain löytyy sanasta, palauta true.
